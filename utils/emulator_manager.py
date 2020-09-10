@@ -90,7 +90,7 @@ class EmulatorManager(object):
             '-kernel', os.path.join(self.imagedir, 'kernel'),
             '-append', ('"console=ttyAMA0 ro root=/dev/sda '
                         'androidboot.hardware=qemu qemu=1 rootwait noinitrd '
-                        'init=/init androidboot.selinux=enforcing"'),
+                        'init=/init androidboot.selinux=permissive"'),
             '-nographic',
             '-device', 'virtio-scsi-device,id=scsi',
             '-device', 'scsi-hd,drive=system',
